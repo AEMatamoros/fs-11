@@ -19,6 +19,11 @@
   text-decoration: none;
 }
 
+.img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 :root {
   --primary-color: rgb(255, 108, 0);
   --font-color: rgb(48, 48, 48);
@@ -36,6 +41,7 @@
 }
 .hero {
   background-color: var(--dark--bg-trans);
+  height: 100vh;
 }
 .about {
   /* background-color: rgba(177, 96, 62, 0.68); */
@@ -178,7 +184,7 @@
 .rating__list > .rating__item {
   background-color: var(--light--secondary);
   color: var(--font-color);
-  /* width: 170px; */
+  width: 170px;
   flex-basis: calc((100% - 30px) / 2);
   max-width: 170px;
   height: 130px;
@@ -189,6 +195,9 @@
   flex-direction: column;
 }
 
+.rating__list > .rating__item:nth-last-child(odd) {
+  margin-top: 30px;
+}
 .rating__list > .rating__item > .count {
   font-weight: 700;
   font-size: 42px;
@@ -197,6 +206,12 @@
   letter-spacing: 0.05em;
   color: var(--second-btn-color);
   margin: 0;
+}
+
+.rating__list > .rating__item > .count::after {
+  content: '+';
+  color: var(--primary-color);
+  font-size: 16px;
 }
 .rating__list > .rating__item > .benefits {
   font-weight: 600;
@@ -428,4 +443,71 @@
 
 .secondary-text {
   color: var(--inactive-color);
+}
+.hero__bg {
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 165, 0, 0.3) 5%,
+      rgba(156, 101, 0, 0.3) 15%,
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('../img/hero-bg.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.services__bg {
+  background-image: url('../img/prices-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.contact__bg {
+  background-image: url('../img/contacts-desktop.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.section-upper-text {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+.section-upper-text::before {
+  display: inline-block;
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: var(--inactive-color);
+}
+
+.hero__footer-navigation {
+  border-bottom: 1px solid var(--inactive-color);
+}
+
+.icons__list {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 34px;
+}
+.icons__item {
+  background-color: var(--detail-color);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons__item:hover {
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.icons__item:hover .icon {
+  fill: var(--detail-color);
 }

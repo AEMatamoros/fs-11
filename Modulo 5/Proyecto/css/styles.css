@@ -19,8 +19,18 @@
   text-decoration: none;
 }
 
+.link:visited {
+  color: var(--primary-color);
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 :root {
   --primary-color: rgb(255, 108, 0);
+  --primary-color-rgb: rgba(255, 108, 0, 0.3);
   --font-color: rgb(48, 48, 48);
   --detail-color: rgb(255, 255, 255);
   --inactive-color: rgb(157, 164, 189);
@@ -36,6 +46,7 @@
 }
 .hero {
   background-color: var(--dark--bg-trans);
+  height: 100vh;
 }
 .about {
   /* background-color: rgba(177, 96, 62, 0.68); */
@@ -60,7 +71,12 @@
   background-color: var(--dark--blue);
 }
 .header {
-  background-color: var(--dark--blue);
+  width: 100%;
+  z-index: 10;
+  position: absolute;
+  /* position: fixed; */
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  /* backdrop-filter: blur(3px); */
 }
 /* Fin Layout */
 .aside__navigation .aside__link {
@@ -94,7 +110,12 @@
 .hero__contact .contact__link:hover {
   color: var(--primary-color);
 }
-
+.hero_main-titles {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .primary-button {
   color: var(--detail-color);
   background-color: transparent;
@@ -134,6 +155,9 @@
 .carrousel {
   display: flex;
   gap: 16px;
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
 }
 .carrousel .carrousel__item {
   color: var(--inactive-color);
@@ -178,7 +202,7 @@
 .rating__list > .rating__item {
   background-color: var(--light--secondary);
   color: var(--font-color);
-  /* width: 170px; */
+  width: 170px;
   flex-basis: calc((100% - 30px) / 2);
   max-width: 170px;
   height: 130px;
@@ -189,6 +213,9 @@
   flex-direction: column;
 }
 
+.rating__list > .rating__item:nth-last-child(odd) {
+  margin-top: 30px;
+}
 .rating__list > .rating__item > .count {
   font-weight: 700;
   font-size: 42px;
@@ -197,6 +224,12 @@
   letter-spacing: 0.05em;
   color: var(--second-btn-color);
   margin: 0;
+}
+
+.rating__list > .rating__item > .count::after {
+  content: '+';
+  color: var(--primary-color);
+  font-size: 16px;
 }
 .rating__list > .rating__item > .benefits {
   font-weight: 600;
@@ -359,6 +392,10 @@
   padding: 0;
 }
 
+.m-0 {
+  margin: 0;
+}
+
 .about__gallery {
   display: flex;
   gap: 30px;
@@ -428,4 +465,105 @@
 
 .secondary-text {
   color: var(--inactive-color);
+}
+.hero__bg {
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 165, 0, 0.3) 5%,
+      rgba(156, 101, 0, 0.3) 15%,
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('../img/hero-bg.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.services__bg {
+  background-image: url('../img/prices-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.contact__bg {
+  background-image: url('../img/contacts-desktop.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.section-upper-text {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+.section-upper-text::before {
+  display: inline-block;
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: var(--inactive-color);
+}
+
+.hero__footer-navigation {
+  border-bottom: 1px solid var(--inactive-color);
+}
+
+.icons__list {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 34px;
+}
+
+.icons__link {
+  background-color: var(--detail-color);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icons__item:hover > .icons__link,
+.icons__item:focus > .icons__link,
+.icons__item:focus-within > .icons__link {
+  background-color: var(--primary-color);
+  cursor: pointer;
+  outline: none;
+}
+
+.icons__item:hover .icon,
+.icons__item:focus .icon,
+.icons__item:focus-within .icon {
+  fill: var(--detail-color);
+}
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+}
+.img-container:hover > .img-text {
+  top: 0;
+}
+
+.img-text {
+  top: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  background-color: var(--primary-color-rgb);
+  padding: 32px;
+  transition: top 0.3s ease;
+  backdrop-filter: blur(3px);
+}
+
+.relative {
+  position: relative;
 }
