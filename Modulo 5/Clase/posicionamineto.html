@@ -105,6 +105,27 @@
         top: 20px;
         z-index: 4;
       }
+      .topBar {
+        top: 0;
+        position: fixed;
+        z-index: 600;
+        width: 100%;
+        height: 5px;
+        background-color: rgb(249, 13, 13);
+        transform: translatex(-100%);
+        animation-name: scrollAnimation;
+        animation-timeline: scroll();
+      }
+      /* @keyframes scrollAnimation {
+        from {
+          transform: translatex(-100%);
+          background-color: rgb(249, 13, 13);
+        }
+        to {
+          transform: translatex(0);
+          background-color: rgb(64, 249, 13);
+        }
+      } */
     </style>
   </head>
   <body>
@@ -129,5 +150,6 @@
     <div class="relative bg-1">relative 1</div>
     <div class="relative bg-2">relative 2</div>
     <div class="relative bg-3">relative 3</div> -->
+    <div class="topBar"></div>
   </body>
 </html>
