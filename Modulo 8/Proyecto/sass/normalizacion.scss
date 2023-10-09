@@ -6,6 +6,10 @@
   font-family: 'Open Sans', 'Roboto', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .section {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -30,6 +34,11 @@
   }
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 //Buttons
 .card {
   .card__body {

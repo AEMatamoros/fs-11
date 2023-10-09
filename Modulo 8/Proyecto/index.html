@@ -8,22 +8,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./sass/main.css" />
     <!-- <link rel="stylesheet" href="./sass/main.css" /> -->
   </head>
 
   <body>
-    <!-- <aside id="main__aside" class="aside">
-      <span><a href="#main__hero" class="link">Icono</a></span>
-      <ul class="aside__navigation list">
-        <li class="aside__item">
-          <a class="aside__link link" href="#">Instagram</a>
-        </li>
-        <li class="aside__item">
-          <a class="aside__link link" href="#">Youtube</a>
-        </li>
-      </ul>
-    </aside> -->
     <header class="header">
       <nav class="header__navigation">
         <ul class="header__links list">
@@ -85,8 +74,8 @@
         </svg>
       </button>
     </header>
-    <main id="main__hero" class="main">
-      <section class="hero--hero__bg section relative">
+    <main class="main">
+      <section class="hero--hero__bg section relative" id="main_hero">
         <div class="container hero_main-titles">
           <div class="hero__texts">
             <span class="upper-text">Barberia para Hombres</span>
@@ -96,10 +85,10 @@
               con rapidez, cuidado y elegancia.
             </p>
           </div>
-          <ul class="carrousel list p-0">
+          <!-- <ul class="carrousel list p-0">
             <li class="carrousel__item">Atras</li>
             <li class="carrousel__item">Siguiente</li>
-          </ul>
+          </ul> -->
         </div>
       </section>
       <section id="main__about" class="about section">
@@ -524,9 +513,9 @@
         </figcaption>
     </figure> -->
     <div class="menu-container js-menu-container" id="mobile-menu">
-      <button class="menu-toggle js-close-menu">
+      <span class="js-close-menu close-button">
         <svg
-          fill="currentColor"
+          class="close-icon"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -538,13 +527,12 @@
             clip-rule="evenodd"
           ></path>
         </svg>
-      </button>
-
+      </span>
       <ul class="mobile-menu">
-        <li><a href="" class="link">About</a></li>
-        <li><a href="" class="link">Products</a></li>
-        <li><a href="" class="link">Contacts</a></li>
-        <li><a href="" class="link">Career</a></li>
+        <li><a href="#main__about" class="link">About</a></li>
+        <li><a href="#main__services" class="link">Products</a></li>
+        <li><a href="#main__contact" class="link">Contacts</a></li>
+        <li><a href="#main__gallery" class="link">Career</a></li>
       </ul>
     </div>
 
