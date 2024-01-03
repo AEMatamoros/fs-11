@@ -8,6 +8,8 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
 .section {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -209,6 +211,7 @@ img {
   display: flex;
   flex-direction: column;
   width: 515px;
+  max-width: 100%;
 }
 .hero__texts p {
   line-height: 1.66;
@@ -399,6 +402,7 @@ img {
   font-family: "Raleway", sans-serif;
   letter-spacing: 0.05em;
   margin: 20px 0;
+  max-width: 100%;
 }
 
 .subtitle {
@@ -908,6 +912,9 @@ img {
   }
 }
 @media (max-width: 768px) {
+  .title {
+    font-size: 62px;
+  }
   .header__navigation {
     display: none;
   }
