@@ -1,0 +1,91 @@
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.container {
+  width: 1200px;
+  margin: auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 32px 0px;
+}
+.navbar-brand {
+  margin-right: 93px;
+}
+.navigation__list {
+  display: flex;
+  align-items: center;
+  margin-right: 344px;
+  column-gap: 50px;
+}
+
+.contact__list {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+}
+.hero-content {
+  display: flex;
+  column-gap: 20px;
+}
+.hero-image {
+  flex-basis: calc((100% - 20px) / 2);
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-basis: calc((100% - 20px) / 2);
+}
+
+.img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.card-gallery {
+  padding: 95px 0;
+}
+
+.gallery {
+  display: flex;
+  align-items: center;
+  gap: 37px;
+}
+.gallery-item {
+  height: 270px;
+  width: 260px;
+  flex-basis: calc((100% - 3 * 37px) / 4);
+  background-color: rgb(42, 126, 165);
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  fill: green;
+}
+.imgtest {
+  width: 100%;
+  height: 80%;
+  background-color: pink;
+}
+.gallery-item:hover {
+  background-color: cyan;
+}
+.gallery-item:hover > .icon {
+  cursor: pointer;
+  fill: red;
+}
+
+/* .section {
+  height: 100vh;
+  background-color: rgb(77, 23, 23);
+}
+
+.box {
+  height: 100vh;
+} */
