@@ -1,0 +1,28 @@
+
+Variables y Tipos:
+Declara una variable llamada nombre y asígnale tu nombre.
+Crea una variable edad y asígnale tu edad.
+Declara una constante llamada PI y asígnale el valor de 3.14159.
+Define una variable esEstudiante y asígnale un valor booleano.
+Crea una variable frutas y asígnale un array con tres nombres de frutas.
+Declara una variable informacion y asígnale un objeto con tu nombre, edad y ciudad.
+
+Derivaciones y Ciclos:
+Escribe un bucle que imprima los números del 1 al 10.
+Crea un bucle que imprima los números pares del 2 al 20.
+Utiliza un bucle while para contar hacia atrás desde 10 hasta 1.
+Escribe una función que sume todos los números del 1 al 100.
+Implementa un bucle for que itere sobre un array e imprima cada elemento.
+Crea una función que imprima los números impares del 1 al 15.
+
+Arreglos:
+Declara un array numeros con cinco números enteros.
+Añade un nuevo número al final del array creado en el ejercicio anterior.
+Elimina el segundo elemento del array frutas que creaste antes.
+Crea una función que reciba un array de números y devuelva la suma de todos ellos.
+Utiliza el método slice para obtener una porción del array numeros.
+Invierte el orden de los elementos en el array frutas.
+
+Funciones:
+Crea una función que acepte dos parámetros y devuelva su suma.
+Define una función que determine si un número es par o impar y devuelva un mensaje.

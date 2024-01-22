@@ -1,0 +1,16 @@
+.box {
+  width: 500px;
+  height: 500px;
+  background-color: teal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.child-box {
+  width: 100px;
+  height: 100px;
+  background-color: tomato;
+  cursor: pointer;
+}

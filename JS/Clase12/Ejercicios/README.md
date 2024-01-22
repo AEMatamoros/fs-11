@@ -1,0 +1,4 @@
+- Eventos. add/remove event lisntener
+- Objeto del Evento
+- Acciones por defecto del navegador
+- Eventos click, change, input, submit, focus, blur і keydown

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .card {
+        width: 300px;
+        height: 300px;
+        background-color: teal;
+      }
+      .card--dark {
+        width: 300px;
+        height: 300px;
+        background-color: teal;
+        color: white;
+        background-color: black;
+      }
+      .card__body--red {
+        color: red;
+      }
+      .box {
+        width: 400px;
+        height: 400px;
+        background-color: teal;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .red {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="content"></h1>
+    <div class="card--dark">
+      <div class="card__header">Titulo</div>
+      <span class="card__img" id="cardImg"
+        ><span>images</span><span>Otro TExto</span></span
+      >
+      <div class="card__body--red">Cuerpo</div>
+      <div class="card__footer">Footer</div>
+      <input type="text" name="username" id="username" value="Alexiss000" />
+      <input type="checkbox" id="gender" />
+    </div>
+    <div
+      class="box main-box rounded"
+      id="box"
+      data-type="circular"
+      data-color="green"
+    >
+      <span>Contenido previo</span>
+    </div>
+    <script defer>
+      // let cardIMG = document.querySelector(".card__img");
+      // let cardIMGID = document.querySelector("#cardImg");
+      // let cardSpan = document.querySelector("span");
+
+      // let cardSpanArray = document.querySelectorAll("span");
+
+      // let cardIMG2 = document.getElementsByClassName("card__img");
+      // let cardIMGID2 = document.getElementById("cardImg");
+      // let cardSpanArray2 = document.getElementsByTagName("span");
+
+      // console.log(cardIMG);
+      // console.log(cardIMGID);
+      // console.log(cardSpan);
+      // console.log(cardSpanArray);
+      // console.log(cardIMG2);
+      // console.log(cardIMGID2);
+      // console.log(cardSpanArray2);
+
+      // let cardIMG = document.querySelector("#cardImg");
+      // console.log(cardIMG);
+
+      // console.log(cardIMG.parentNode, "cardIMG.parentNode;");
+      // console.log(cardIMG.childNodes, "cardIMG.childNodes;");
+      // console.log(cardIMG.children, "cardIMG.children;");
+      // console.log(cardIMG.firstChild, "cardIMG.firstChild;");
+      // console.log(cardIMG.firstElementChild, "cardIMG.firstElementChild;");
+      // console.log(cardIMG.lastChild, "cardIMG.lastChild;");
+      // console.log(cardIMG.lastElementChild, "cardIMG.lastElementChild;");
+      // console.log(cardIMG.previousSibling, "cardIMG.previousSibling;");
+      // console.log(
+      //   cardIMG.previousElementSibling,
+      //   "cardIMG.previousElementSibling;"
+      // );
+      // console.log(cardIMG.nextSibling, "cardIMG.nextSibling;");
+      // console.log(cardIMG.nextElementSibling, "cardIMG.nextElementSibling;");
+      // Get Value
+      // Obtener valores del input
+      let elementUsername = document.getElementById("username");
+      console.log(elementUsername.value);
+      console.log(elementUsername.name);
+      console.log(elementUsername.type);
+      // Obtener estado del checkbox
+      let gender = document.getElementById("gender");
+      console.log(gender.checked);
+      //Content
+      let content = document.querySelector("#content");
+      content.textContent = "Contenido agregado desde JS <span>images</span>";
+      //Class
+      let box = document.querySelector("#box");
+      console.log(box.classList);
+      console.log(box.classList.contains("box"));
+      console.log(box.classList.contains("red"));
+      console.log(box.classList.add("red"));
+      console.log(box.classList);
+      console.log(box.classList.remove("red"));
+      console.log(box.classList);
+      console.log(box.classList.toggle("red"));
+      console.log(box.classList);
+      console.log(box.classList.toggle("red"));
+      console.log(box.classList);
+      //Style
+      box.style.backgroundColor = "green";
+      box.style.borderRadius = "50%";
+      box.style.border = "4px solid black";
+      //Data Atributes
+      console.log(box.attributes);
+      console.log(box.hasAttribute("data-type"));
+      let type = box.getAttribute("data-type");
+      console.log(type);
+      box.setAttribute("data-name", "CircularValue");
+      console.log(box.attributes);
+      box.removeAttribute("data-name");
+      console.log(box.attributes);
+
+      //Crear elemetnos
+      //Padre
+      let padre = document.querySelector("#box");
+      let div = document.createElement("div");
+      div.innerHTML = "<h1>Hola contenido agregado desde JS</h1>";
+
+      // padre.append(div);
+      // padre.prepend(div);
+      // padre.after(div);
+      // padre.before(div);
+      // padre.insertAdjacentElement("beforebegin", div);
+      // padre.insertAdjacentElement("afterbegin", div);
+      // padre.insertAdjacentElement("beforeend", div);
+      padre.insertAdjacentElement("afterend", div);
+
+      // ("beforebegin");
+      // ("afterbegin");
+      // ("beforeend");
+      // ("afterend");
+    </script>
+  </body>
+</html>

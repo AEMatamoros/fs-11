@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form events</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      rel="stylesheet"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="../css/form-events.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container">
+      <form class="contact-form js-contact-form">
+        <input
+          class="contact-form-input js-username-input"
+          name="username"
+          type="text"
+          required
+          placeholder="Your name"
+        />
+        <label class="js-policy-label">
+          <input
+            class="contact-form-checkbox js-policy-checkbox"
+            name="policy-accept"
+            type="checkbox"
+            value="true"
+          />
+          Yo <span class="js-username-output">user</span> estoy de acuerdo con
+          politica de privacidad
+        </label>
+        <button
+          class="contact-form-btn js-contact-form-submit"
+          type="submit"
+          disabled
+        >
+          Enviar
+        </button>
+      </form>
+    </div>
+    <script src="../js/form-events.js" type="module"></script>
+  </body>
+</html>

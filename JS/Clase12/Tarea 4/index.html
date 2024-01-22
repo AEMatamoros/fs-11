@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="counter">
+      <button type="button" data-action="decrement">-1</button>
+      <span id="value">0</span>
+      <button type="button" data-action="increment">+1</button>
+    </div>
+    <script>
+      let spanCounter = document.getElementById("value");
+      let buttons = document.getElementsByTagName("button");
+      let counter = 0;
+      //console.log(buttons[0].attributes["data-action"].value);
+      for (let index = 0; index < buttons.length; index++) {
+        buttons[index].addEventListener("click", (e) => {
+          if (e.target.attributes["data-action"].value == "decrement") {
+            counter = counter - 1;
+          } else {
+            counter = counter + 1;
+          }
+          spanCounter.textContent = `${counter}`;
+        });
+      }
+    </script>
+  </body>
+</html>
