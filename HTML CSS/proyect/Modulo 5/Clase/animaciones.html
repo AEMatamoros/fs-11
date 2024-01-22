@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --cubic: cubic-bezier(0.93, 0.36, 0.55, 1.11);
+      }
+      body {
+        position: relative;
+        min-height: 100vh;
+      }
+      .box {
+        margin-top: 30px;
+        display: inline-block;
+        background-color: #f7b2ad;
+        width: 150px;
+        height: 150px;
+        /* Las transiciones siempre se aplican sobre el elemento inicial */
+        /* transition-property: background-color, width, height;
+        transition-duration: 1s, 1s, 0.3s;
+        transition-timing-function: var(--cubic), ease-in, ease-out;
+        transition-delay: 2s, 0, 0; */
+        /* transition: background-color 1s var(--cubic) 3s, width 1s ease-in 1s,
+          height 0.3s ease-out 2s; */
+
+        /* Descomentar para probar la trancion con la tyransformacion */
+        transition: all 0.3s var(--cubic);
+        /* Otra forma de centrar un div */
+        /* position: absolute;
+        top: 50%;
+        left: 50%; */
+        /* transform: translate(-50%, -50%); */
+      }
+
+      .box:hover {
+        /* Descomentar para probar transicion */
+        /* background-color: #333232;
+        width: 50px;
+        height: 50px; */
+        /* Descomentar para probar Transformaciones */
+        /* Rotate */
+        transform: rotate(-360deg) translateX(50px);
+        /* Scale */
+        /* transform: scale(1.01);
+        box-shadow: 2px 2px 2px rgb(144, 143, 143); */
+        /* Translate */
+        /* transform: translate(50px, 100px); */
+        /* transform: translateX(50px); */
+        /* transform: translateY(-50px); */
+        /* transform: skew(10deg); */
+        /* transform: skew(10deg) rotate(45deg); */
+        border-radius: 50%;
+        background-color: blueviolet;
+      }
+
+      /* .box:focus,
+      .box:focus-within,
+      .box:focus-visible {
+        background-color: #17cb2c;
+      } */
+
+      /* .box.boxX {
+        background-color: #cb17cb;
+      } */
+    </style>
+  </head>
+  <body>
+    <a class="box boxX"></a>
+  </body>
+</html>

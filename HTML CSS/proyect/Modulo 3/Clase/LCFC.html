@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* .padre {
+        list-style-type: none;
+      } */
+      /* .hijos:first-child {
+        color: red;
+      }
+      .hijos:not(:first-child) {
+        color: rgb(204, 0, 255);
+      }
+      .hijos:last-child {
+        color: blue;
+      } */
+      /* .padreParInpar{} */
+      .hijos:nth-child(2n) {
+        color: rgb(0, 26, 255);
+      }
+
+      .hijos:nth-child(2n + 1) {
+        color: red;
+      }
+
+      .hijos:nth-child(even) {
+        color: rgb(34, 124, 58);
+      }
+      .hijos:nth-child(odd) {
+        color: rgb(255, 0, 195);
+      }
+
+      /* Esto es invalido */
+      /* .hijos:nth-child(2 + 4) {
+        color: rgb(198, 23, 23);
+      } */
+    </style>
+  </head>
+  <body>
+    <!-- <ul class="padre">
+      <li class="hijos">Element 0</li>
+      <li class="hijos">Element 1</li>
+      <li class="hijos">Element 2</li>
+      <li class="hijos">Element 1</li>
+      <li class="hijos">Element 2</li>
+      <li class="hijos">Element 1</li>
+      <li class="hijos">Element 2</li>
+    </ul>
+    <ul class="padre">
+      <li class="hijos">Element 0</li>
+      <li class="hijos">Element 1</li>
+      <li class="hijos">Element 2</li>
+    </ul>
+    <ul class="padre">
+      <li class="hijos">Element 0</li>
+      <li class="hijos">Element 1</li>
+      <li class="hijos">Element 2</li>
+    </ul> -->
+
+    <ul class="padreParInpar">
+      <li class="hijos">Element 0</li>
+      <li class="hijos">Element 1</li>
+      <li class="hijos">Element 2</li>
+      <li class="hijos">Element 1</li>
+      <li class="hijos">Element 2</li>
+      <li class="hijos">Element 1</li>
+      <li class="hijos">Element 2</li>
+      <li class="hijos">Element 2</li>
+      <li class="hijos">Element 1</li>
+      <li class="hijos">Element 2</li>
+    </ul>
+  </body>
+</html>

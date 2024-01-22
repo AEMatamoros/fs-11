@@ -1,0 +1,99 @@
+@media (max-width: 1224px) {
+  .team__list .team__item {
+    width: 450px;
+    -ms-flex-preferred-size: calc((100% - 30px * 1) / 2);
+    flex-basis: calc((100% - 30px * 1) / 2);
+    height: auto;
+  }
+  .about__list {
+    max-width: 768px;
+    -ms-flex-preferred-size: 768px;
+    flex-basis: 768px;
+  }
+  .work__item {
+    -ms-flex-preferred-size: calc((100% - 30px * 2) / 3);
+    flex-basis: calc((100% - 30px * 2) / 3);
+  }
+}
+@media (max-width: 962px) {
+  .work__item {
+    -ms-flex-preferred-size: calc((100% - 30px * 1) / 2);
+    flex-basis: calc((100% - 30px * 1) / 2);
+  }
+}
+@media (max-width: 768px) {
+  .header__navigation {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .menu-container {
+    display: block;
+  }
+  .team__list .team__item {
+    width: 450px;
+    -ms-flex-preferred-size: calc((100% - 30px * 1) / 1);
+    flex-basis: calc((100% - 30px * 1) / 1);
+  }
+  .services__list .services__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 690px;
+    -ms-flex-preferred-size: 690px;
+    flex-basis: 690px;
+    color: var(--inactive-color);
+  }
+  .rating__list {
+    -ms-flex-preferred-size: calc((100% - 30px) / 1);
+    flex-basis: calc((100% - 30px) / 1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px;
+    justify-content: center;
+  }
+  .rating__texts {
+    -ms-flex-preferred-size: calc((100% - 30px) / 1);
+    flex-basis: calc((100% - 30px) / 1);
+  }
+  .work__item {
+    -ms-flex-preferred-size: calc((100% - 30px * 1) / 1);
+    flex-basis: calc((100% - 30px * 1) / 1);
+  }
+  .contact__msg,
+  .contact__reserv {
+    width: 90%;
+  }
+  .about__gallery {
+    max-width: 100%;
+    justify-content: center;
+  }
+  .about__texts {
+    max-width: 100%;
+  }
+  .services__item {
+    width: 100%;
+  }
+  .rating__container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .rating__texts {
+    width: 100%;
+  }
+  .team__list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .team__item {
+    flex-basis: calc((100% - 30px * 1) / 2);
+  }
+  .work__list {
+    flex-wrap: wrap;
+  }
+}

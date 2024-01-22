@@ -1,0 +1,20 @@
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: brown;
+  position: relative;
+  bottom: 60px;
+  left: 60px;
+  display: inline-block;
+}
+.box2 {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(42, 165, 87);
+  display: inline-block;
+}
+.box-container {
+  width: 700px;
+  height: 700px;
+  background-color: rgb(42, 165, 144);
+}
