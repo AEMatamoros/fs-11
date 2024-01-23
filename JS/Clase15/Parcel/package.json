@@ -1,0 +1,21 @@
+{
+  "name": "parcel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx parcel src/index.html"
+  },
+  "keywords": [],
+  "author": "Eduardo <Eduardo@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "posthtml-doctype": "^1.1.1",
+    "posthtml-include": "^1.7.4"
+  },
+  "dependencies": {
+    "sweetalert2": "^11.10.3"
+  }
+}

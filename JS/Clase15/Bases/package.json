@@ -1,0 +1,19 @@
+{
+  "name": "clase15",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/index.js",
+    "dev:esm": "nodemon ./src/index.mjs"
+  },
+  "keywords": [],
+  "author": "Eduardo <Eduardo@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "nanoid": "^5.0.4",
+    "shortid": "^2.2.15"
+  }
+}
