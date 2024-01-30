@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo List</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <h1>Todo List</h1>
+
+    <div id="todo-container">
+      <input type="text" id="todo-input" placeholder="Añadir tarea" />
+      <button id="add-button">Añadir</button>
+    </div>
+
+    <ul id="todo-list"></ul>
+
+    <script src="./js/main.js"></script>
+    <script>
+      let person = {
+        name: "Alexis",
+        apellido: "MAtammros",
+        edad: 20,
+      };
+
+      // console.log(person);
+      let personToString = JSON.stringify(person);
+      // console.log(personToString);
+
+      let personToObj = JSON.parse(personToString);
+      // console.log(personToObj);
+
+      let persons = [
+        { name: "Alexis" },
+        { name: "Alexis" },
+        { name: "Alexis" },
+        { name: "Alexis" },
+      ];
+      let personsString = JSON.stringify(persons);
+      // console.log(personsString);
+      // console.log(JSON.parse(personsString));
+
+      //Errores de ejecucion
+      // console.log(JSON.parse(num));
+      // console.log(person.direccion);
+      // console.log(10 / 0);
+      // console.log([1, 2, 3, 34].toUppeCase());
+
+      // try {
+      //   console.log(JSON.parse("Hola como estan!"));
+      // } catch (error) {
+      //   console.log(error);
+      //   console.log("Ocurrio un error");
+      // } finally {
+      //   console.log("Codigo que sigue despues del bloque");
+      // }
+
+      // //Login FB
+      // try {
+      //   // Escriben credenciales
+      //   // Loader
+      // } catch (error) {
+      //   //Manejariamos error de login
+      //   //Quitar el loader
+      // } finally {
+      //   // Quitamos el loader redigimos al ususario
+      // }
+    </script>
+
+    <script>
+      localStorage.setItem("nombre", "GoItCurso");
+      localStorage.setItem("nombre2", "GoItCurso");
+      localStorage.removeItem("nombre2");
+
+      localStorage.setItem("nombre3", JSON.stringify({ name: "Juan" }));
+
+      let obj = localStorage.getItem("nombre3");
+      // console.log(JSON.parse(obj));
+
+      let obj2 = localStorage.getItem("nombre4");
+      // console.log(obj2);
+
+      // localStorage.clear();
+    </script>
+  </body>
+</html>
