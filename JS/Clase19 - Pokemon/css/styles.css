@@ -1,0 +1,42 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+.pokedex {
+  text-align: center;
+  margin: 20px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff;
+  display: inline-block;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  color: #e62117;
+}
+
+.pokemon-list {
+  min-height: 150vh;
+}
+
+button {
+  background-color: teal;
+  color: white;
+  padding: 0.5rem;
+}
+
+button:hover {
+  background-color: rgb(9, 58, 58);
+}

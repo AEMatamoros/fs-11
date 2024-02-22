@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <title>Pokédex</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- <div class="row">
+        <div class="col-md-8">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              id="searchInput"
+              class="form-control"
+              placeholder="Buscar por nombre..."
+            />
+            <div class="input-group-append">
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                id="search"
+              >
+                Buscar
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 text-right">
+          <nav aria-label="Page navigation">
+            <ul class="pagination">
+              <li class="page-item" id="prevPage">
+                <a class="page-link" href="#" aria-label="Anterior">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item" id="nextPage">
+                <a class="page-link" href="#" aria-label="Siguiente">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div> -->
+      <h1 class="text-center mt-4 mb-4">Pokédex</h1>
+      <div class="pagination">
+        <button id="previous-page"></button>
+        <span id="page-info"></span>
+        <button id="next-page"></button>
+        <select name="limitInput" id="limit">
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+        </select>
+      </div>
+      <div class="row" id="pokemon-list"></div>
+    </div>
+
+    <script src="./js/opcion2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
