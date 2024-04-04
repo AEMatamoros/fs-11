@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD básico con Promesas y Fetch</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h1 class="text-center my-5">CRUD Básico con Promesas y Fetch</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <!-- <button id="addButton" class="btn btn-success mb-3">
+            Agregar Producto
+          </button> -->
+        </div>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Descripcion</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+    <script>
+      let tableBody = document.getElementById("tableBody");
+      function fetchData() {
+        console.log("Inicio del loading");
+        fetch("http://localhost:3000/products", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json; charset=UTF-8",
+          },
+        })
+          .then((serverResponse) => {
+            if (!serverResponse.ok) {
+              throw new Error("Ocurrion un error en la peticion");
+              return;
+            }
+            return serverResponse.json();
+          })
+          .then((data) => {
+            // Renderizado
+            //     <tr>
+            //     <th scope="row">1</th>
+            //     <td>Mark</td>
+            //     <td>Otto</td>
+            //     <td>@mdo</td>
+            //   </tr>
+            let toRenderNodes = data.map((product, index) => {
+              let tr = document.createElement("tr");
+              let th = document.createElement("th");
+              th.scope = "row";
+              th.textContent = index + 1;
+              let tdNombre = document.createElement("td");
+              tdNombre.textContent = product.name;
+              let tdDescripcion = document.createElement("td");
+              tdDescripcion.textContent = product.description;
+              let tdPrecio = document.createElement("td");
+              tdPrecio.textContent = product.price;
+              tr.append(th, tdNombre, tdDescripcion, tdPrecio);
+              return tr;
+            });
+            // console.log(toRenderNodes)
+            tableBody.append(...toRenderNodes);
+          })
+          .catch((err) => {
+            alert("Ocurrion un error");
+          })
+          .finally(() => {
+            console.log("Dejar de mostrar loading");
+          });
+      }
+      // fetchData();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      axios
+        .get("http://localhost:3000/products")
+        .then((response) => console.log(response.data));
+
+        axios.post
+    </script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "plaiestore-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "json-server --watch db.json"
+  },
+  "keywords": [],
+  "author": "Eduardo <Eduardo@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "json-server": "^1.0.0-alpha.23"
+  }
+}

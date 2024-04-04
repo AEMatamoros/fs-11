@@ -1,0 +1,31 @@
+body {
+  padding-top: 50px;
+}
+
+.productItem {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.editButton,
+.deleteButton {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.editButton {
+  background-color: lightblue;
+}
+
+.deleteButton {
+  background-color: lightcoral;
+}

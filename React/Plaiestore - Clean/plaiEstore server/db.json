@@ -1,0 +1,101 @@
+{
+  "apps": [
+    {
+      "id": 0,
+      "img": "https://play-lh.googleusercontent.com/fQne-6_Le-sWScYDSRL9QdG-I2hWxMbe2QbDOzEsyu3xbEsAb_f5raRrc6GUNAHBoQ=w526-h296-rw",
+      "name": "Mario Kart",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolor, eos porro soluta sunt eaque!",
+      "price": 5,
+      "rating": 4
+    },
+    {
+      "id": 1,
+      "img": "https://play-lh.googleusercontent.com/WvsQ8nOhwxX8uTwlJTGR153HFpcYxQ6X1EPzPdGUfK9QVJTJucgMySl3H_qtPsg06js=w526-h296-rw",
+      "name": "Pokemon",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolor, eos porro soluta sunt eaque!",
+      "price": 5,
+      "rating": 3
+    },
+    {
+      "id": 2,
+      "img": "https://play-lh.googleusercontent.com/kaY4bh8WImKl3tCiJmEFVobIFW0w03eJcO-Wr9b5BydQkYJO0Ym3RL7JYWPAQlvhAaN6=w526-h296-rw",
+      "name": "DBZ",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolor, eos porro soluta sunt eaque!",
+      "price": 5,
+      "rating": 3
+    },
+    {
+      "id": 3,
+      "img": "https://play-lh.googleusercontent.com/hEc8j5E0XYEiooGMnu2I7W7sKKypTGVNgljWCwVx4DOPX0fu3Umr-94UuLERiOAM7t8=w526-h296-rw",
+      "name": "Pug G",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolor, eos porro soluta sunt eaque!",
+      "price": 5,
+      "rating": 1
+    },
+    {
+      "id": 4,
+      "img": "https://play-lh.googleusercontent.com/uiGhSpel88x8OjU5eHacNn5GS0RtbXTLW1QEDXocMv6T1QAqpKJTFlys5l5V84lrSUc=w526-h296-rw",
+      "name": "Clash Rroyalwe",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolor, eos porro soluta sunt eaque!",
+      "price": 5,
+      "rating": 3
+    },
+    {
+      "id": 5,
+      "img": "https://play-lh.googleusercontent.com/A5ivtMq98cCIZr4jSv0Xg4wsnGgfnlrqgAMzJwQtJe9mM2r1jdsv00OSw1Jo366mwuAF=w526-h296-rw",
+      "name": "GoKart",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolor, eos porro soluta sunt eaque!",
+      "price": 5,
+      "rating": 3
+    },
+    {
+      "id": 6,
+      "img": "https://play-lh.googleusercontent.com/smX6SIxH0y9jW7T_nRcidRdpaVuCH4gpeAv1yH-gWnEHrENEc_9LiRg_5jKHXNS6DUI=w526-h296-rw",
+      "name": "Ninja Storm",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolor, eos porro soluta sunt eaque!",
+      "price": 5,
+      "rating": 2
+    },
+    {
+      "id": 7,
+      "img": "https://play-lh.googleusercontent.com/NdGK8qUA3NxbkRrxIo1UQTFehsfkNpeCzLXB4cKyJnyOsv_YW3Fdm4q0xEZoQJotcw=w526-h296-rw",
+      "name": "Tom RAIDER",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolor, eos porro soluta sunt eaque!",
+      "price": 5,
+      "rating": 4
+    },
+    {
+      "id": 8,
+      "img": "https://play-lh.googleusercontent.com/TeU-uXhB6n2R1lOdCWzJuR3Fu4NwAsMJPJLBPiQjdsVGJcbBXaswICh-ULcTsVwMmuU=w526-h296-rw",
+      "name": "Sumonhers War",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolor, eos porro soluta sunt eaque!",
+      "price": 5,
+      "rating": 3
+    },
+    {
+      "id": 9,
+      "img": "https://play-lh.googleusercontent.com/VHuxzkMizO75MHpRnUWPnOh9bo2KccdsBUREDnNArlIBPzdTo_OWwIU_Pj3mFLut0Vzp=w526-h296-rw",
+      "name": "Elden Ring",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolor, eos porro soluta sunt eaque!",
+      "price": 5,
+      "rating": 5
+    },
+    {
+      "id": 10,
+      "img": "https://play-lh.googleusercontent.com/lN59zRXr26-ht2jIypTPd4X1ga2pNzzEDtSEhgjLiHUI3UBVOFWmcZmvP5hsZEaw5A=w526-h296-rw",
+      "name": "Sekiro",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolor, eos porro soluta sunt eaque!",
+      "price": 5,
+      "rating": 3
+    },
+    {
+      "id": 11,
+      "img": "https://play-lh.googleusercontent.com/ASZexwc4NHJNWdbV73GNifYOqHz8Ig65bCxpOZsLABp6uNxtdTfJYJgLyjuvoZcWEFA=w526-h296-rw",
+      "name": "Dark Souls",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolor, eos porro soluta sunt eaque!",
+      "price": 5,
+      "rating": 1
+    }
+  ],
+  "auth": []
+}
