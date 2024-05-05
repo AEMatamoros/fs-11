@@ -1,42 +1,52 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  addTaskAction,
-  updateTaskAction,
-  deleteTaskAction,
-  filterTaskAction,
-} from "./redux/actions/taskActions";
 import "./App.css";
 
+import {
+  thunkFetchTaskActionOperator,
+  thunkAddTaskActionOperator,
+} from "./redux-toolkit-thunk/operators/TaskOperators";
+import {
+  selectTasks,
+  selectLoading,
+  selectError,
+} from "./redux-toolkit-thunk/selectors/taskSelectors";
+import { selectFilter } from "./redux-toolkit-thunk/selectors/filterSelectors";
+//old
+import {
+  asyncUpdateTaskActionOperator,
+  asyncDeleteTaskActionOperator,
+} from "./redux-toolkit-async/operators/TaskOperators";
+
+import { filterTaskAction } from "./redux-toolkit-slice/slices/FilterSlice";
+//old
 function App() {
   //Redux
   const dispatch = useDispatch();
-  const tasks = useSelector((state) => state.tasks);
-  const filter = useSelector((state) => state.filter);
-  const [state, setState] = useState({
-    tasks: [],
-    isLoading: false,
-    error: false,
-    filter: "all",
-  });
+  //Selectores del Store
+  const tasks = useSelector(selectTasks);
+  const isLoading = useSelector(selectLoading);
+  const error = useSelector(selectError);
+  const filter = useSelector(selectFilter);
 
-  //State
-  const isLoading = state.isLoading;
-  const error = state.error;
+  //Fetch
+  useEffect(() => {
+    dispatch(thunkFetchTaskActionOperator());
+  }, [dispatch]);
 
   //Dispatch
   const addTask = () => {
     if (newTask.title.trim() !== "") {
-      dispatch(addTaskAction(newTask));
+      dispatch(thunkAddTaskActionOperator(newTask));
     }
   };
 
-  const updateTask = (id) => {
-    dispatch(updateTaskAction(id));
+  const updateTask = (newTask) => {
+    dispatch(asyncUpdateTaskActionOperator(newTask));
   };
 
   const handleDelete = (id) => {
-    dispatch(deleteTaskAction(id));
+    dispatch(asyncDeleteTaskActionOperator(id));
   };
 
   const handleFilter = (filterState) => {
@@ -98,7 +108,7 @@ function App() {
                   <input
                     type="checkbox"
                     checked={task.completed}
-                    onChange={() => updateTask(index)}
+                    onChange={() => updateTask(task)}
                   />
                   <span className={task.completed ? "completed" : ""}>
                     {task.title}
@@ -107,7 +117,7 @@ function App() {
                   {/* <span>{JSON.stringify(task)}</span> */}
                   <button
                     onClick={() => {
-                      handleDelete(index);
+                      handleDelete(task.id);
                     }}
                   >
                     Delete
