@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+}
+.relative .hero-img {
+  transform: translateX(-100%);
+  transition: transform 0.2s ease-in;
+}
+
+.relative:hover .hero-img {
+  background-color: rgba(103, 35, 35, 0.5);
+  backdrop-filter: blur(3px);
+  transform: translateX(0);
+  cursor: pointer;
+}
