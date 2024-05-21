@@ -1,0 +1,13 @@
+{
+  "name": "modules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:c": "node --watch ./src/commonJS/index.js",
+    "dev:e": "node --watch ./src/ecmascript/index.mjs"
+  },
+  "author": "Eduardo <Eduardo@gmail.com>",
+  "license": "MIT"
+}

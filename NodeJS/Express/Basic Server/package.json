@@ -1,0 +1,17 @@
+{
+  "name": "modules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch ./src/index.js"
+  },
+  "author": "Eduardo <Eduardo@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^12.0.0",
+    "express": "^4.19.2",
+    "yargs": "^17.7.2"
+  }
+}
