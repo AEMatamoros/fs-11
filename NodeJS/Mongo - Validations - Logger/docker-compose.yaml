@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=nombre_de_tu_base_de_datos
+
+volumes:
+  mongodb_data:

@@ -1,0 +1,34 @@
+error: [object Object]
+error: undefined
+error: undefined
+error: undefined undefined undefined
+error: undefined undefined undefined
+error: undefined undefined undefined
+error: undefined undefined undefined
+error: undefined undefined undefined
+error: undefined undefined undefined
+error: undefined undefined undefined
+error: undefined undefined undefined
+error: undefined undefined undefined
+error: /api/movies POST undefined
+error: /api/movies POST "title" is required
+error: /api/movies POST "title" is required
+error: /api/movies POST "title" is required
+error: /api/movies POST "title" is required
+error: Desconocido
+error: /api/user/register POST userSchema validation failed: mail: Path `mail` is required.
+error: /api/user/register POST Cannot set headers after they are sent to the client
+error: /api/user/register POST createdUser.ToJSON is not a function
+error: /api/user/login POST data and hash arguments required
+error: /api/user/login POST data and hash arguments required
+error: /api/user/login POST data and hash arguments required
+error: /api/user/login POST data and hash arguments required
+error: /api/user/login POST userSchema.find(...).toObject is not a function
+error: /api/user/login POST userSchema.find(...).toObject is not a function
+error: /api/user/login POST userSchema.find(...).toObject is not a function
+error: /api/user/login POST foundedUser.toObject is not a function
+error: /api/user/login POST data and hash arguments required
+error: /api/user/login POST users is not defined
+error: /api/movies GET Operation `moviesschemas.find()` buffering timed out after 10000ms
+error: /api/movies?skip=4 GET error is not defined
+error: /api/movies?skip=0&limit=2&searchWord=Game%20of%20trones%20the%20movie%204&searchField=title&fields=[%22title%22] GET Options must be an object, got """
