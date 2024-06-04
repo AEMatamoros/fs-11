@@ -4,6 +4,8 @@ const morgan = require("morgan");
 const connectDB = require("./db/config");
 const dotenv = require("dotenv");
 const handleError = require("./midlewares/utils/errorHandler");
+const passport = require("passport");
+
 if (process.env.NODE_ENV == "dev") {
   dotenv.config({ path: ".env.dev" });
 } else {
@@ -11,6 +13,7 @@ if (process.env.NODE_ENV == "dev") {
 }
 //init DB
 connectDB();
+require("./helpers/validateJWTPassport");
 
 //Init Server instance
 const app = express();
@@ -19,6 +22,8 @@ app.use(morgan());
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(passport.initialize());
+//Passport Si prueban jwt comentar esta linea
 
 const appRouter = require("./routers/router");
 

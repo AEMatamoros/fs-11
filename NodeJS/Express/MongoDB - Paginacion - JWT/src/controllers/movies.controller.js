@@ -1,10 +1,6 @@
 const movieSchema = require("../schema/movie.schema");
 const getMoviesData = async (req, res, next) => {
   try {
-    // if (!req.query.limit && req.query.skip) {
-    //   next(error);
-    //   return;
-    // }
     const conf = [
       {
         ...(req.query.searchField && req.query.searchWord

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      fetch("http://localhost:3000/api/user/userDataPassport", {
+        method: "POST",
+        header: {
+          Authorization:
+            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjU3ZDE5Y2FkZTczZTcxMzA5MTdhNGYiLCJ1c2VybmFtZSI6Ikp1YW4iLCJtYWlsIjoidGV4dEBnbWFpbC5jb20iLCJpYXQiOjE3MTc0NjgxNTMsImV4cCI6MTcxNzQ3NTM1M30.xuYayGTuWf416el2JayGeazxrCz4xB9jZGveKxwT4Bo",
+        },
+      })
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    </script>
+  </body>
+</html>

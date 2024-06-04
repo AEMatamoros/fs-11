@@ -32,3 +32,11 @@ error: /api/user/login POST users is not defined
 error: /api/movies GET Operation `moviesschemas.find()` buffering timed out after 10000ms
 error: /api/movies?skip=4 GET error is not defined
 error: /api/movies?skip=0&limit=2&searchWord=Game%20of%20trones%20the%20movie%204&searchField=title&fields=[%22title%22] GET Options must be an object, got """
+error: /api/user/login POST Promise constructor cannot be invoked without 'new'
+error: /api/user/userdata POST jwt must be provided
+error: /api/user/userdata POST jwt must be provided
+error: /api/user/userdata POST jwt must be provided
+error: /api/user/userdata POST jwt must be provided
+error: /api/user/userdata POST jwt must be provided
+error: /api/user/userdata POST invalid token
+error: /api/user/userDataPassport POST Unknown authentication strategy "jwt"

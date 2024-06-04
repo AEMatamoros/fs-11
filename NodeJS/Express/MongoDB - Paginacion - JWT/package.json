@@ -18,8 +18,11 @@
     "express": "^4.19.2",
     "http-errors": "^2.0.0",
     "joi": "^17.13.1",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.4.0",
     "morgan": "^1.10.0",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
     "winston": "^3.13.0",
     "yargs": "^17.7.2"
   }
