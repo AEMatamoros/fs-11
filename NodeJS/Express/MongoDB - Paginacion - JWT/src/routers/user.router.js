@@ -17,7 +17,8 @@ router.post(
   "/userDataPassport",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
-    res.send("user Data obtained");
+    //Controller
+    res.send("User is  Auth data will be returned");
   }
 );
 

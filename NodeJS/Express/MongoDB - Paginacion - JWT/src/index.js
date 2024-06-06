@@ -23,7 +23,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(passport.initialize());
-//Passport Si prueban jwt comentar esta linea
 
 const appRouter = require("./routers/router");
 

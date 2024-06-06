@@ -7,8 +7,8 @@ opts.secretOrKey = process.env.JWT_SECRET;
 
 passport.use(
   new JwtStrategy(opts, (jwt_payload, done) => {
-    console.log(jwt_payload);
-    return done(null, { _id: 1, name: "Juan" });
+    // console.log(jwt_payload);
+    return done(null, { _id: 1, user: { ...jwt_payload } });
   })
 );
 
