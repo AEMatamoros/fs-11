@@ -1,5 +1,6 @@
-const { Schema, model } = require("mongoose");
 const Joi = require("joi");
+const { Schema, model } = require("mongoose");
+
 const movieSchema = Schema({
   title: {
     type: String,
@@ -30,6 +31,11 @@ const movieSchema = Schema({
     type: Boolean,
     default: false,
   },
+  category: {
+    type: Schema.Types.ObjectId,
+    ref: "categoriesSchema",
+    required: true,
+  },
 });
 
 const validationSchema = Joi.object({
@@ -38,6 +44,7 @@ const validationSchema = Joi.object({
   director: Joi.string().required(),
   description: Joi.string().min(5).max(10),
   hasGrammy: Joi.boolean(),
+  category: Joi.string().required(),
 });
 
 movieSchema.methods.validateSchema = (req, res, next) => {

@@ -1,4 +1,6 @@
 const movieSchema = require("../schema/movie.schema");
+const categoriesSchema = require("../schema/category.schema");
+const { createMovieService } = require("../services/movies.services");
 const getMoviesData = async (req, res, next) => {
   try {
     const conf = [
@@ -50,12 +52,32 @@ const getMovieById = async (req, res, next) => {
 
 const createMovie = async (req, res, next) => {
   try {
-    const newMovie = movieSchema({
-      year: req.body.year,
-      director: req.body.director,
-      description: req.body.description,
-    });
-    const movie = await newMovie.save();
+    let existingCategory;
+    try {
+      existingCategory = await categoriesSchema.find({
+        _id: req.body.category,
+      });
+    } catch (error) {
+      res.status(400).json({
+        title: "Error",
+        msg: "Invalid Category",
+      });
+    }
+
+    if (!existingCategory) {
+      res.status(400).json({
+        title: "Error",
+        msg: "Invalid Category",
+      });
+      return;
+    }
+    const movie = await createMovieService(
+      req.body.title,
+      req.body.year,
+      req.body.director,
+      req.body.description,
+      req.body.category
+    );
     res.status(200).json({
       title: "Success",
       msg: "Movies Created",

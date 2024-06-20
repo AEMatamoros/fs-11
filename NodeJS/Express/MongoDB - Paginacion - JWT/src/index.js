@@ -11,10 +11,10 @@ if (process.env.NODE_ENV == "dev") {
 } else {
   dotenv.config({ path: ".env" });
 }
+const passportConfig = require("./helpers/validateJWTPassport");
 //init DB
 connectDB();
-require("./helpers/validateJWTPassport");
-
+passportConfig();
 //Init Server instance
 const app = express();
 //Conf

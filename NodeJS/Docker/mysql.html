@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dockerizando MySQL y phpMyAdmin</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #333;
+      }
+
+      code {
+        background-color: #f4f4f4;
+        padding: 2px 4px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-family: "Courier New", monospace;
+      }
+
+      pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        overflow-x: auto;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Dockerizando MySQL y phpMyAdmin</h1>
+
+    <p>
+      En esta guía, aprenderás cómo crear una aplicación dockerizada con MySQL y
+      phpMyAdmin. Esto te permitirá tener un entorno de desarrollo de base de
+      datos MySQL de forma rápida y portable.
+    </p>
+
+    <h2>Pasos</h2>
+
+    <ol>
+      <li>
+        <h3>Paso 1: Ejecutar un Contenedor MySQL</h3>
+        <p>
+          Abre tu terminal y ejecuta el siguiente comando para descargar y
+          ejecutar un contenedor de MySQL:
+        </p>
+        <pre><code>docker run --name mi-mysql-container -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:latest</code></pre>
+        <ul>
+          <li>
+            <code>--name mi-mysql-container:</code> Establece el nombre del
+            contenedor como "mi-mysql-container".
+          </li>
+          <li>
+            <code>-e MYSQL_ROOT_PASSWORD=my-secret-pw:</code> Especifica la
+            contraseña del usuario root de MySQL.
+          </li>
+          <li><code>-d:</code> Ejecuta el contenedor en segundo plano.</li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>Paso 2: Ejecutar un Contenedor phpMyAdmin</h3>
+        <p>
+          Ejecuta el siguiente comando para descargar y ejecutar un contenedor
+          de phpMyAdmin:
+        </p>
+        <pre><code>docker run --name mi-phpmyadmin -d --link mi-mysql-container:db -p 8080:80 phpmyadmin/phpmyadmin</code></pre>
+        <ul>
+          <li>
+            <code>--name mi-phpmyadmin:</code> Establece el nombre del
+            contenedor como "mi-phpmyadmin".
+          </li>
+          <li>
+            <code>--link mi-mysql-container:db:</code> Establece una conexión
+            entre el contenedor de phpMyAdmin y el contenedor de MySQL.
+          </li>
+          <li>
+            <code>-p 8080:80:</code> Mapea el puerto 8080 de tu máquina local al
+            puerto 80 del contenedor de phpMyAdmin.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>Paso 3: Conectar phpMyAdmin a MySQL</h3>
+        <p>
+          Abre tu navegador web y visita <code>http://localhost:8080</code>.
+          Ingresa las credenciales:
+        </p>
+        <ul>
+          <li>
+            <strong>Usuario:</strong> root (o según la configuración de tu
+            MySQL).
+          </li>
+          <li>
+            <strong>Contraseña:</strong> my-secret-pw (o la contraseña que hayas
+            establecido).
+          </li>
+          <li>
+            <strong>Servidor:</strong> db (nombre del host que estableciste al
+            enlazar los contenedores).
+          </li>
+        </ul>
+        <p>
+          Ahora estarás conectado a phpMyAdmin y podrás administrar la base de
+          datos MySQL desde una interfaz web.
+        </p>
+      </li>
+    </ol>
+
+    <h2>Recursos Adicionales</h2>
+
+    <ul>
+      <li>
+        <a href="https://docs.docker.com/">Documentación oficial de Docker</a>
+      </li>
+      <li>
+        <a href="https://hub.docker.com/_/mysql"
+          >Imagen oficial de MySQL en Docker Hub</a
+        >
+      </li>
+      <li>
+        <a href="https://hub.docker.com/r/phpmyadmin/phpmyadmin"
+          >Imagen oficial de phpMyAdmin en Docker Hub</a
+        >
+      </li>
+    </ul>
+
+    <script>
+      // Puedes agregar scripts adicionales si es necesario.
+    </script>
+  </body>
+</html>

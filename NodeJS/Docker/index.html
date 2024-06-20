@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guía Básica de Docker</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #333;
+      }
+
+      code {
+        background-color: #f4f4f4;
+        padding: 2px 4px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-family: "Courier New", monospace;
+      }
+
+      pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        overflow-x: auto;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Guía Básica de Docker</h1>
+
+    <h2>Introducción a Docker</h2>
+
+    <p><strong>¿Qué es Docker?</strong></p>
+    <p>
+      Docker es una plataforma de contenerización que permite empaquetar,
+      distribuir y ejecutar aplicaciones en entornos aislados llamados
+      contenedores...
+    </p>
+
+    <p><strong>Conceptos Clave</strong></p>
+    <ul>
+      <li>
+        <strong>Imagen:</strong> Un paquete ejecutable que incluye todo lo
+        necesario para ejecutar una aplicación, incluidas bibliotecas,
+        dependencias y código...
+      </li>
+      <li>
+        <strong>Contenedor:</strong> Una instancia en ejecución de una imagen.
+        Los contenedores son entornos aislados que ejecutan aplicaciones y
+        comparten el núcleo del sistema operativo del host...
+      </li>
+      <li>
+        <strong>Dockerfile:</strong> Un archivo de configuración que especifica
+        cómo se debe construir una imagen. Contiene instrucciones para instalar
+        software, configurar el entorno y definir la aplicación...
+      </li>
+    </ul>
+
+    <h2>Instalación de Docker</h2>
+
+    <h3>Linux</h3>
+    <pre>
+        <code>
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo usermod -aG docker $USER
+        </code>
+    </pre>
+
+    <h3>macOS</h3>
+    <p>
+      Descarga e instala
+      <a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a
+      >.
+    </p>
+
+    <h3>Windows</h3>
+    <p>
+      Descarga e instala
+      <a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a
+      >.
+    </p>
+
+    <!-- Resto de la guía -->
+
+    <h2>Comandos Básicos de Docker</h2>
+
+    <ol>
+      <li>
+        <p><strong>Verificar instalación:</strong></p>
+        <pre><code>docker --version<br>docker-compose --version</code></pre>
+      </li>
+      <li>
+        <p><strong>Ejecutar un contenedor:</strong></p>
+        <pre><code>docker run hello-world</code></pre>
+      </li>
+      <!-- Más comandos... -->
+
+    <h2>Recursos Adicionales</h2>
+    <p>-d Ejecucion en segundo plano</p> 
+    <p>-e Se creara una variable de entorno</p> 
+    <p>-f Especifica qu es utilizara un archivo</p> 
+    <ul>
+      <li>
+        <a href="https://docs.docker.com/">Documentación oficial de Docker</a>
+      </li>
+      <li>
+        <a href="https://hub.docker.com/">Docker Hub</a>: Repositorio de
+        imágenes Docker públicas y privadas.
+      </li>
+    </ul>
+
+    <script>
+      // Puedes agregar scripts adicionales si es necesario.
+    </script>
+  </body>
+</html>

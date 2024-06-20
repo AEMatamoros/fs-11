@@ -40,3 +40,48 @@ error: /api/user/userdata POST jwt must be provided
 error: /api/user/userdata POST jwt must be provided
 error: /api/user/userdata POST invalid token
 error: /api/user/userDataPassport POST Unknown authentication strategy "jwt"
+error: /api/user/userdata POST next is not defined
+error: /api/movies POST "title" is required
+error: /api/movies POST "title" is required
+error: /api/movies POST moviesSchema validation failed: title: Path `title` is required.
+error: /api/movies POST moviesSchema validation failed: title: Path `title` is required.
+error: /api/movies POST moviesSchema validation failed: title: Path `title` is required.
+error: /api/movies POST moviesSchema validation failed: title: Path `title` is required.
+error: /api/movies POST "title" is not allowed
+error: /api/movies POST moviesSchema validation failed: title: Path `title` is required.
+error: /api/movies POST "title" is not allowed
+error: /api/movies POST moviesSchema validation failed: title: Path `title` is required.
+error: /api/movies POST moviesSchema validation failed: title: Path `title` is required.
+error: /api/movies POST moviesSchema validation failed: title: Path `title` is required.
+error: /api/movies POST moviesSchema validation failed: title: Path `title` is required.
+error: /api/movies POST moviesSchema validation failed: title: Path `title` is required.
+error: /api/movies POST newMovie is not defined
+error: /api/movies POST newMovie is not defined
+error: /api/movies POST moviesSchema validation failed: title: Path `title` is required.
+error: /api/movies POST moviesSchema validation failed: title: Path `title` is required.
+error: /api/movies POST moviesSchema validation failed: year: Cast to Number failed for value "This is the title" (type string) at path "year", title: Path `title` is required.
+error: /api/movies POST moviesSchema validation failed: category: Path `category` is required.
+error: /api/movies POST moviesSchema validation failed: category: Path `category` is required.
+error: /api/movies POST moviesSchema validation failed: category: Path `category` is required.
+error: /api/movies POST Unexpected token } in JSON at position 119
+error: /api/movies POST moviesSchema validation failed: category: Cast to ObjectId failed for value "6667afb282078wasdasdasdd6e791a9e3aa" (type string) at path "category" because of "BSONError"
+error: /api/movies POST Cast to ObjectId failed for value "6667afb2820786e791asdfsdf9e3aa" (type string) at path "_id" for model "categoriesSchema"
+error: /api/movies POST Cannot set headers after they are sent to the client
+error: /api/movies POST Cannot set headers after they are sent to the client
+error: /api/movies POST Cannot set headers after they are sent to the client
+error: /api/movies?skip=0&limit=2&searchWord=Game%20of%20trones%20the%20movie%204&searchField=title&fields=[%22year%22,%20%22title%22] GET "title" is required
+error: /api/categories POST "title" is required
+error: /api/user/register POST "username" is required
+error: /api/movies POST "title" is required
+error: /api/movies POST moviesSchema validation failed: title: Path `title` is required., year: Path `year` is required., director: Path `director` is required., description: Path `description` is required., category: Path `category` is required.
+error: /api/movies POST moviesSchema validation failed: title: Path `title` is required., year: Path `year` is required., director: Path `director` is required., description: Path `description` is required., category: Path `category` is required.
+error: /api/movies POST Cannot set headers after they are sent to the client
+error: /api/movies POST moviesSchema validation failed: title: Path `title` is required., year: Path `year` is required., director: Path `director` is required., description: Path `description` is required., category: Path `category` is required.
+error: /api/movies POST moviesSchema validation failed: title: Path `title` is required., year: Path `year` is required., director: Path `director` is required., description: Path `description` is required., category: Path `category` is required.
+error: /api/movies POST moviesSchema validation failed: title: Path `title` is required., year: Path `year` is required., director: Path `director` is required., description: Path `description` is required., category: Path `category` is required.
+error: /api/movies POST moviesSchema validation failed: title: Path `title` is required., year: Path `year` is required., director: Path `director` is required., description: Path `description` is required., category: Path `category` is required.
+error: /api/movies POST moviesSchema validation failed: title: Path `title` is required., year: Path `year` is required., director: Path `director` is required., description: Path `description` is required., category: Path `category` is required.
+error: /api/movies POST moviesSchema validation failed: description: Path `description` (`Esta es la descripcion`) is longer than the maximum allowed length (10).
+error: /api/movies POST "title" is required
+error: /api/movies POST jwt must be provided
+error: /api/categories GET jwt must be provided

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guía Docker Compose con MongoDB y Mongo Express</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #333;
+      }
+
+      code {
+        background-color: #f4f4f4;
+        padding: 2px 4px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-family: "Courier New", monospace;
+      }
+
+      pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        overflow-x: auto;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Guía Docker Compose con MongoDB y Mongo Express</h1>
+
+    <p>
+      Esta guía te mostrará cómo crear una conexión con MongoDB y un
+      administrador de base de datos (Mongo Express) utilizando Docker Compose.
+    </p>
+
+    <h2>Paso 1: Crear un archivo <code>docker-compose.yml</code></h2>
+
+    <pre><code>
+version: '3'
+services:
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
+  mongo-express:
+    image: mongo-express:latest
+    ports:
+      - "8081:8081"
+    environment:
+      ME_CONFIG_MONGODB_SERVER: mongo
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: example
+    </code></pre>
+
+    <p>
+      Este archivo define dos servicios: <code>mongo</code> para el servidor
+      MongoDB y <code>mongo-express</code> para el administrador de MongoDB
+      (Mongo Express). Ajusta las variables de entorno según tus preferencias.
+    </p>
+
+    <h2>Paso 2: Ejecutar Docker Compose</h2>
+
+    <p>
+      Guarda el archivo como <code>docker-compose.yml</code> y ejecuta el
+      siguiente comando en la misma carpeta que el archivo:
+    </p>
+
+    <pre><code>
+docker-compose up
+    </code></pre>
+
+    <p>
+      Este comando descargará las imágenes necesarias y creará los contenedores
+      de MongoDB y Mongo Express según la configuración del archivo
+      <code>docker-compose.yml</code>.
+    </p>
+    <h2>Iniciar creacion</h2>
+    <code> docker-compose -f mongo.yml up </code>
+    <h2>Paso 3: Acceder a Mongo Express</h2>
+
+    <p>
+      Abre tu navegador web y visita <code>http://localhost:8081</code>. Verás
+      la interfaz de inicio de sesión de Mongo Express.
+    </p>
+
+    <ul>
+      <li><strong>Usuario:</strong> root</li>
+      <li><strong>Contraseña:</strong> example</li>
+      <li><strong>Servidor:</strong> mongo</li>
+    </ul>
+
+    <p>
+      Ahora estarás conectado a Mongo Express y podrás administrar la base de
+      datos MongoDB desde una interfaz web.
+    </p>
+
+    <p>
+      ¡Listo! Has creado una conexión con MongoDB y un administrador de base de
+      datos utilizando Docker Compose. Este entorno es ideal para el desarrollo
+      y prueba de aplicaciones con MongoDB. Recuerda ajustar las configuraciones
+      según tus necesidades específicas.
+    </p>
+
+    <h2>Recursos Adicionales</h2>
+
+    <ul>
+      <li>
+        <a href="https://docs.docker.com/">Documentación oficial de Docker</a>
+      </li>
+      <li>
+        <a href="https://hub.docker.com/_/mongo"
+          >Imagen oficial de MongoDB en Docker Hub</a
+        >
+      </li>
+      <li>
+        <a href="https://hub.docker.com/_/mongo-express"
+          >Imagen oficial de Mongo Express en Docker Hub</a
+        >
+      </li>
+    </ul>
+
+    <script>
+      // Puedes agregar scripts adicionales si es necesario.
+    </script>
+  </body>
+</html>

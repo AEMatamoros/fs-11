@@ -8,7 +8,7 @@ const logger = winston.createLogger({
 
 function handleError(err, req, res, next) {
   // console.log(err);
-  if (err) {
+  if (err && req.url) {
     logger.error(`${req.url} ${req.method} ${err.message}`);
     res.status(400).json({ ok: false, err });
     return;
